@@ -1,0 +1,138 @@
+\section{Desarrollo } 
+
+Crear relaciones
+\begin{itemize}
+
+\item Tarea 1 :  Relaciones automaticas
+
+
+\begin{enumerate}
+\item Ingresar a Power BI Desktop.
+\item En la Ventana de Power BI Desktop, click en Obtener Datos (Get Data)
+\item En el cuadro de dialogo Obtener Datos (Get Data), asegurarse que Excel esta seleccionado y hacer click
+en Conectar (Connect).
+\item En el cuadro de dialogo Abrir (Open), buscar el archivo Adventure Works Sales Data.xlsx, y luego hacer
+click en Abrir (Open).
+\item En el cuadro de dialogo Explorador (Navigator), seleccionar las hojas DimCurrency, DimCustomer,
+DimDate, DimProduct, DimPromotion, DimSalesTerritory, y FactInternetSales.
+\item Hacer click en Cargar (Load).
+
+\includegraphics[width=8cm]{./Imagenes/1.png} \includegraphics[width=8cm]{./Imagenes/2.png}
+
+\item En el panel de vistas a mano derecho, hacer click en Relaciones (Relationships).
+\item En el menú principal, hacer click en Administrar relaciones (Manage Relationships).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer click en Nueva (New).
+\item En el cuadro de Administrar relaciones (Manage Relationships), en la lista de tablas superior, hacer click
+en FactInternetSales. Cuando la vista previa de la table aparezca hacer click en la columna
+OrderDateKey.
+\item En la lista de table inferior, hacer click en DimDate. Cuando la vista previa de la table aparezca hacer click
+en la columna DateKey.
+\item Revisar que la cardinalidad (Cardinality) esta seleccionada para Muchos a Uno (Many to One (*:1)), que la
+Dirección del filtro cruzado (Cross filter direction) es Sencilla (Single), y que la opción Hacer esta relación
+activa (Make this relationship active) se encuentra seleccionada, luego hacer click en Aceptar (OK)
+
+\begin{center}
+\includegraphics[width=8cm]{./Imagenes/3.png}
+\end{center}
+
+\item Revisar que la cardinalidad (Cardinality) esta seleccionada para Muchos a Uno (Many to One (*:1)), que la
+Dirección del filtro cruzado (Cross filter direction) es Sencilla (Single), y que la opción Hacer esta relación
+activa (Make this relationship active) se encuentra seleccionada, luego hacer click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer click en Cerrar (Close).
+Pág. 2
+\item En el diagrama, en la tabla FactInternetSales, hacer click en la columna DueDateKey. Arrastrar la columna
+DueDateKey a la columna DateKey de la tabla DimDate.
+\item En el diagrama, en la tabla FactInternetSales, hacer click en la columna ShipDateKey. Arrastrar la
+columna ShipDateKey a la columna DateKey de la tabla DimDate
+
+\begin{center}
+\includegraphics[width=8cm]{./Imagenes/4.png}
+\end{center}
+
+En el menú principal, hacer click en Administrar relaciones (Manage Relationships).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer doble click en la relación
+FactInternetSales (CurrencyKey).
+\item En la lista de Dirección de Filtro Cruzado (Cross filter direction), hacer click en Sencilla (Single), luego
+hacer click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer doble click en la relación
+FactInternetSales (ProductKey).
+\item En la lista de Dirección de Filtro Cruzado (Cross filter direction), hacer click en Sencilla (Single), luego
+hacer click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer doble click en la relación
+FactInternetSales (PromotionKey).
+\item En la lista de Dirección de Filtro Cruzado (Cross filter direction), hacer click en Sencilla (Single), luego
+hacer click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer doble click en la relación
+FactInternetSales (SalesTerritoryKey).
+\item En la lista de Dirección de Filtro Cruzado (Cross filter direction), hacer click en Sencilla (Single), luego
+hacer click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer click en Cerrar (Close)..
+\item Hacer click en la línea de relación entre FactInternetSales and DimCustomer y presionar Borrar (Delete).
+\item En el cuadro de dialogo Eliminar relación (Delete Relationship), hacer click en Borrar (Delete).
+\item En el menú principal, hacer click en Administrar relaciones (Manage Relationships).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer click en Nueva (New).
+\item En la lista de tablas superior, hacer click en FactInternetSales. Luego hacer click en la columna
+CustomerKey en la vista de datos previa.
+\item En la lista de tablas superior, hacer click en DimCustomer, y hacer click CustomerKey en la vista de datos
+previa.
+\item En la lista de Cardinalidad (Cardinality), hacer click en Muchos a Uno (Many to One (*:1)), y luego hacer
+click en Aceptar (OK).
+\item En el cuadro de Administrar relaciones (Manage Relationships), hacer click en Cerrar (Close).
+
+\includegraphics[width=8cm]{./Imagenes/5.png} \includegraphics[width=8cm]{./Imagenes/6.png}
+\begin{center}
+\includegraphics[width=8cm]{./Imagenes/7.png} 
+\end{center}
+
+\end{enumerate}
+
+
+
+\item Tarea 2 :   Relaciones manuales
+
+
+\begin{enumerate}
+
+\item En la Ventana de Power BI Desktop, click en Obtener Datos (Get Data) y luego en Excel
+\item Abrir el archivo Adventure Works Product Categories.xlsx.
+\item En el cuadro de dialogo Explorador (Navigator), seleccionar las hojas DimProductCategory, and
+DimProductSubcategory, y luego hacer click en Cargar (Load).
+\item En el panel de Relaciones, revisar la relación que Power BI ha creado entre las dos tablas.
+\item Hacer click en la línea de la relación entre DimProductCategory, y DimProductSubcategory, y seleccionar
+Eliminar (Delete).
+\item En el cuadro de dialogo Eliminar relación (Delete Relationship), hacer click en Borrar (Delete).
+\item Arrastrar la columna CategoryKey en la tabla DimProductSubcategory a la columna Category en la tabla
+DimProductCategory, para crear una relación Muchos a uno (Many to One (*:1)), y una dirección de filtro
+cruzado (Cross filter
+direction) en ambos.
+\item En la tabla DimProduct, arrastrar la columna ProductSubcategoryKey a la columna SubcategoryKey en la
+tabla DimProductSubcategory, para crear una relación de Muchos a Uno (Many to One (*:1)), y una
+dirección de filtro cruzado (Cross filter direction) en ambos.
+\item Hacer click en Guardar
+
+\includegraphics[width=8cm]{./Imagenes/8.png} \includegraphics[width=8cm]{./Imagenes/9.png}
+
+\includegraphics[width=8cm]{./Imagenes/10.png} \includegraphics[width=8cm]{./Imagenes/11.png}
+
+\includegraphics[width=8cm]{./Imagenes/12.png} \includegraphics[width=8cm]{./Imagenes/13.png}
+
+\begin{center}
+\includegraphics[width=8cm]{./Imagenes/13.png}
+\end{center}
+
+\end{enumerate}
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
